@@ -3,7 +3,6 @@
 
 <form action="/" method='POST'>
     {% csrf_token %}
-    <a href="{% url "update" form.id %}">Update</a>
     {{form.task}}
     <input type="submit" value="Create">
 </form>
@@ -11,6 +10,7 @@
 
 {% for task in tasks %}
     <div>
+        <a href="{% url 'update' task.id %}">Update</a>
         {{ task }}
     </div>
 {% endfor %}

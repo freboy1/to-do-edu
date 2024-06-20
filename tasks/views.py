@@ -19,3 +19,6 @@ def index(request):
 
     context = {'tasks': tasks, 'form': form}
     return render(request, 'tasks/index.html', context)
+
+def update(request, id):
+    return HttpResponse("FUCK YOU")
