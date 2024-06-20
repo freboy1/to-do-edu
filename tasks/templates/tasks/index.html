@@ -2,6 +2,7 @@
 
 
 <form action="/" method='POST'>
+    {% csrf_token %}
     {{form.task}}
     <input type="submit" value="Create">
 </form>
