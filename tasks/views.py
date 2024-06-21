@@ -36,3 +36,8 @@ def update(request, id):
 
     context = {'form': form}
     return render(request, 'tasks/update.html', context)
+
+
+def delete(request, id):
+    task = Task.objects.get(id=id)
+    return render(request, 'tasks/delete.html')
