@@ -21,4 +21,6 @@ def index(request):
     return render(request, 'tasks/index.html', context)
 
 def update(request, id):
-    return HttpResponse("FUCK YOU")
+    task = Task.objects.get(id=id)
+
+    return HttpResponse(task)
