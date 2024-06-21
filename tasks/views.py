@@ -23,4 +23,4 @@ def index(request):
 def update(request, id):
     task = Task.objects.get(id=id)
 
-    return HttpResponse(task)
+    return render(request, 'tasks/update.html')
