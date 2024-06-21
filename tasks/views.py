@@ -40,4 +40,10 @@ def update(request, id):
 
 def delete(request, id):
     task = Task.objects.get(id=id)
+
+    if request.method == 'POST':
+        task.delete()
+        return redirect('/')
+
+
     return render(request, 'tasks/delete.html')
