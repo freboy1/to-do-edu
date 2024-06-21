@@ -23,4 +23,7 @@ def index(request):
 def update(request, id):
     task = Task.objects.get(id=id)
 
-    return render(request, 'tasks/update.html')
+    form = TaskForm(instance=task)
+
+    context = {'form': form}
+    return render(request, 'tasks/update.html', form)
