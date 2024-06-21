@@ -26,4 +26,4 @@ def update(request, id):
     form = TaskForm(instance=task)
 
     context = {'form': form}
-    return render(request, 'tasks/update.html', form)
+    return render(request, 'tasks/update.html', context)
